@@ -40,6 +40,7 @@ export default {
   margin-left: auto;
   /* border: 10px rgb(238, 99, 18); */
   background-color: rgb(34, 38, 38);
+  color : blanchedalmond ;
 
 }
 
