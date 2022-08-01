@@ -1,27 +1,20 @@
+<template>
   
-  <template>
+   <router-view />
   
-    <SignUp /> 
-  
-  </template>
+   
 
+</template>
 
 <script>
+import SignUp from "./components/SignUp.vue";
 
-    import SignUp from './components/SignUp.vue'
-
-
-
-
-   export default {
-    name : 'App' , 
-    components : {
-      SignUp
-    }
-   }
-
-
-
+export default {
+  name: "App",
+  components: {
+    SignUp,
+  },
+};
 </script>
 
 <style>
