@@ -9,6 +9,10 @@
     <input type="password" v-model="password" placeholder="Enter Password" />
 
     <button v-on:click="signUp">SignUp</button>
+
+    <p>
+      <router-link to="/Login">Login</router-link>
+    </p>
   </div>
 </template>
 
@@ -42,12 +46,12 @@ export default {
     },
   },
 
-        mounted(){
-          let user = localStorage.getItem('user-info') ;
-          if (user) {
-            this.$router.push({name : 'Home'})
-          }
-        }
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: "Home" });
+    }
+  },
 };
 </script>
 

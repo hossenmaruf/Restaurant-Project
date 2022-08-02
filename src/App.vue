@@ -1,18 +1,14 @@
 <template>
-  
-   <router-view />
-  
-   
-
+  <router-view />
 </template>
 
 <script>
-import SignUp from "./components/SignUp.vue";
+
 
 export default {
   name: "App",
   components: {
-    SignUp,
+    
   },
 };
 </script>
@@ -25,5 +21,33 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.resister input,
+.login input {
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  display: block;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  /* border: 10px rgb(238, 99, 18); */
+  background-color: rgb(34, 38, 38);
+  color: blanchedalmond;
+}
+
+.resister button,
+.input button {
+  width: 160px;
+  height: 40px;
+  border: 1px skyblue;
+  background-color: black;
+  color: aliceblue;
+  cursor: pointer;
 }
 </style>
