@@ -33,7 +33,7 @@ body {
 }
 
 .resister input,
-.login input {
+.login input , .addResto input {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -43,11 +43,10 @@ body {
   margin-left: auto;
   /* border: 10px rgb(238, 99, 18); */
   background-color: rgb(34, 38, 38);
-  color: blanchedalmond;
+  color: rgb(234, 147, 15);
 }
 
-.resister button,
-.input button {
+.resister button, .input button , .addResto button {
   width: 160px;
   height: 40px;
   border: 1px skyblue;

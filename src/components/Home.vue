@@ -1,4 +1,4 @@
-<template>
+  <template>
   <Header />
 
   <h1>hello {{ name }} , this is home page</h1>
