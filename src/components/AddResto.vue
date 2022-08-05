@@ -14,7 +14,7 @@
       type="text"
       name="Address"
       placeholder="Enter address"
-      v-model="restaurant.address"
+      v-model="restaurant.addres"
     />
     <input
       type="text"
@@ -46,18 +46,15 @@ export default {
 
   methods: {
     async addRestaurant() {
-      console.log(this.restaurant);
-
       const result = await axios.post("http://localhost:3000/restaurant", {
         name: this.restaurant.name,
         addres: this.restaurant.addres,
         contact: this.restaurant.contact,
       });
 
-      if (result.status ==201){
-        this.$router.push({name :"Home" })
+      if (result.status == 201) {
+        this.$router.push({ name: "Home" });
       }
-
     },
   },
 
