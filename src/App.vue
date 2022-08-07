@@ -46,7 +46,7 @@ body {
   color: rgb(234, 147, 15);
 }
 
-.resister button, .input button , .addResto button {
+.resister button, .addResto button {
   width: 160px;
   height: 40px;
   border: 1px skyblue;

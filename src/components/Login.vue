@@ -10,7 +10,7 @@
     <button v-on:click="login">Login</button>
 
     <p>
-      <router-link to="/SignUp">SignUp</router-link>
+      <router-link to="/SignUp"  >SignUp</router-link>
     </p>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
   methods: {
     async login() {
       let result = await axios.get(
-        `  http://localhost:3000/users?email=${this.email}&password = ${this.password}  `
+        `http://localhost:3000/users?email=${this.email}&password = ${this.password}`
       );
 
       if (result.status == 200 && result.data.length > 0) {
@@ -37,7 +37,6 @@ export default {
         this.$router.push({ name: "Home" });
       }
 
-      console.warn(result);
     },
   },
 
@@ -49,3 +48,17 @@ export default {
   },
 };
 </script>
+
+
+<style>
+
+  .login button{
+      width: 160px;
+  height: 40px;
+  border: 1px skyblue;
+  background-color: black;
+  color: aliceblue;
+  cursor: pointer;
+  }
+
+</style>
