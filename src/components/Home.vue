@@ -26,6 +26,8 @@
 
       <td>
         <router-link :to="'/UpdateResto/' + item.id"> Update </router-link>
+
+        <button v-on:click="deletedData(item.id)">Deleted</button>
       </td>
     </tr>
   </table>
@@ -37,7 +39,7 @@ import Axios from "axios";
 
 export default {
   name: "HomePage",
-  components: { Header },
+
   data() {
     return {
       name: " ",
@@ -46,20 +48,34 @@ export default {
     };
   },
 
+  components: { Header },
+
+  methods: {
+    async deletedData(id) {
+      let result = await Axios.delete("http://localhost:3000/restaurant/" + id);
+
+      if (result.status == 200) {
+        this.loadData();
+      }
+    },
+
+    async loadData() {
+      let user = localStorage.getItem("user-info");
+
+      this.name = JSON.parse(user).name;
+
+      if (!user) {
+        this.$router.push({ name: "SignUP" });
+      }
+
+      let result = await Axios.get("http://localhost:3000/restaurant");
+
+      this.restaurant = result.data;
+    },
+  },
+
   async mounted() {
-    let user = localStorage.getItem("user-info");
-
-    this.name = JSON.parse(user).name;
-
-    if (!user) {
-      this.$router.push({ name: "SignUP" });
-    }
-
-    let result = await Axios.get("http://localhost:3000/restaurant");
-
-    console.warn(result);
-
-    this.restaurant = result.data;
+    this.loadData();
   },
 };
 </script>
