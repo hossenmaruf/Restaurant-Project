@@ -32,7 +32,7 @@ export default {
 
   methods: {
     async signUp() {
-      let result = await axios.post("https://kaleidoscopic-frangipane-8b34f6.netlify.app/users", {
+      let result = await axios.post("http://localhost:3000/users", {
         email: this.email,
         name: this.name,
         password: this.password,

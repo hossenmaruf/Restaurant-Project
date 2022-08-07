@@ -48,7 +48,7 @@ export default {
   methods: {
     async updateRastaurant() {
       const result = await axios.put(
-        "https://kaleidoscopic-frangipane-8b34f6.netlify.app/" + this.$route.params.id,
+        "http://localhost:3000/restaurant/" + this.$route.params.id,
         {
           name: this.restaurant.name,
           addres: this.restaurant.addres,
@@ -69,7 +69,7 @@ export default {
     }
 
     const result = await axios.get(
-      "  https://kaleidoscopic-frangipane-8b34f6.netlify.app/" + this.$route.params.id
+      "  http://localhost:3000/restaurant/" + this.$route.params.id
     );
 
     this.restaurant = result.data;

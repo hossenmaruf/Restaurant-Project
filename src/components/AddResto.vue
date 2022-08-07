@@ -46,7 +46,7 @@ export default {
 
   methods: {
     async addRestaurant() {
-      const result = await axios.post("https://kaleidoscopic-frangipane-8b34f6.netlify.app/restaurant", {
+      const result = await axios.post("http://localhost:3000/restaurant", {
         name: this.restaurant.name,
         addres: this.restaurant.addres,
         contact: this.restaurant.contact,

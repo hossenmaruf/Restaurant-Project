@@ -29,7 +29,7 @@ export default {
   methods: {
     async login() {
       let result = await axios.get(
-        `https://kaleidoscopic-frangipane-8b34f6.netlify.app/users?email=${this.email}&password = ${this.password}`
+        `http://localhost:3000/users?email=${this.email}&password = ${this.password}`
       );
 
       if (result.status == 200 && result.data.length > 0) {
