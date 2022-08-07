@@ -52,7 +52,7 @@ export default {
 
   methods: {
     async deletedData(id) {
-      let result = await Axios.delete("http://localhost:3000/restaurant/" + id);
+      let result = await Axios.delete("https://kaleidoscopic-frangipane-8b34f6.netlify.app/" + id);
 
       if (result.status == 200) {
         this.loadData();
@@ -68,7 +68,7 @@ export default {
         this.$router.push({ name: "SignUP" });
       }
 
-      let result = await Axios.get("http://localhost:3000/restaurant");
+      let result = await Axios.get("https://kaleidoscopic-frangipane-8b34f6.netlify.app/");
 
       this.restaurant = result.data;
     },
